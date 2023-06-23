@@ -1,24 +1,21 @@
-package com.example.BookMyShow.Models;
+package com.example.BookMyShow.ResponseDtos;
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity
-@Table(name = "users")
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+public class UserResponseDto {
     private String name;
     private int age;
     private String mobileNo;
-    @Column(unique = true)
     private String emailId;
+
+
+    private String statusCode;
+    private String statusMessage;
 }
