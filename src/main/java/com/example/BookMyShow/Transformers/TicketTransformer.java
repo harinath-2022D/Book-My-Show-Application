@@ -29,6 +29,7 @@ public class TicketTransformer {
     public static TicketResponseDto convertEntityToDto(Show show, Ticket ticket){
 
         TicketResponseDto ticketResponseDto = TicketResponseDto.builder()
+                .ticketNo(ticket.getId())
                 .bookedSeats(ticket.getBookedSeats())
                 .movie(show.getMovie().getName())
                 .theater(show.getTheater().getName())

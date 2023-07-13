@@ -13,6 +13,7 @@ import java.util.Date;
 @NoArgsConstructor
 @Data
 public class TicketResponseDto {
+    private int ticketNo;
     private LocalTime showTime;
     private Date showDate;
     private String movie;

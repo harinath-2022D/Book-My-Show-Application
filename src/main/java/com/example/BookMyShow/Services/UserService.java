@@ -1,9 +1,11 @@
 package com.example.BookMyShow.Services;
 
 import com.example.BookMyShow.Exceptions.NoUserFoundException;
+import com.example.BookMyShow.Models.Ticket;
 import com.example.BookMyShow.Models.User;
 import com.example.BookMyShow.Repositories.UserRepository;
 import com.example.BookMyShow.RequestDtos.AddUserDto;
+import com.example.BookMyShow.ResponseDtos.TicketResponseDto;
 import com.example.BookMyShow.ResponseDtos.UserResponseDto;
 import com.example.BookMyShow.Transformers.UserTransformer;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,8 +44,4 @@ public class UserService {
         return userResponseDto;
     }
 
-    public List<User> findUsersGreaterThanAge(int age) {
-        List<User> userList = userRepository.findUsersGreaterThanAge(age);
-        return userList;
-    }
 }

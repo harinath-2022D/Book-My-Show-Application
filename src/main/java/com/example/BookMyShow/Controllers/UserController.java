@@ -1,12 +1,15 @@
 package com.example.BookMyShow.Controllers;
 
+import com.example.BookMyShow.Models.Ticket;
 import com.example.BookMyShow.Models.User;
 import com.example.BookMyShow.RequestDtos.AddUserDto;
+import com.example.BookMyShow.ResponseDtos.TicketResponseDto;
 import com.example.BookMyShow.ResponseDtos.UserResponseDto;
 import com.example.BookMyShow.Services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -45,8 +48,6 @@ public class UserController {
         }
     }
 
-    @GetMapping("/UsersGreaterThanAge")
-    public List<User> findUsersGreaterThanAge(@RequestParam("age") int age){
-        return userService.findUsersGreaterThanAge(age);
-    }
+
+
 }
